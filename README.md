@@ -47,3 +47,41 @@ cd asterisk-*
 ./configure
 make && make install
 ```
+
+
+## Get configuration files
+
+Backup configuration files which come with Asterisk default installation:
+
+```
+cd /etc/
+mv asterisk asterisk.orig
+```
+
+Install `git` (if not already present on your system):
+```
+apt-get install git-core
+```
+
+Checkout GoTrunk configuration files:
+```
+git clone https://github.com/GoTrunk/asterisk-config.git asterisk
+```
+
+For Asterisk on Static IP:
+```
+cd /etc/asterisk
+git checkout static-ip
+```
+
+For Asterisk on Dynamic IP:
+```
+cd /etc/asterisk
+git checkout dynamic-ip
+```
+
+## Update configuration files
+
+Use your favorite text editor to update `sip.conf` file.
+
+Change `!!!ReplaceWithProperPassword!!!` in example extensions `201` and `202` configuration. For `dynamic-ip` configuration update your GoTrunk `SIP_CREDENTIALS`
