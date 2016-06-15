@@ -21,17 +21,24 @@ Install required packages:
 apt-get install build-essential openssl libxml2-dev libncurses5-dev uuid-dev sqlite3 libsqlite3-dev pkg-config libjansson-dev
 ```
 
-Get Asterisk source:
+Get Asterisk source, compile and install:
 
 Asterisk 11
 ```
 cd /usr/src
-wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-11-current.tar.gz 
+wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-11-current.tar.gz
+tar xf asterisk-11-current.tar.gz
+cd asterisk-*
+./configure
+make && make install
 ```
 
 Asterisk 13
 ```
 cd /usr/src
-wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz 
+wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz
+tar xf asterisk-13-current.tar.gz
+cd asterisk-*
+./configure
+make && make install
 ```
-
